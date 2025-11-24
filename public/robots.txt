@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Запрещаем индексацию служебных файлов
+Disallow: /_nuxt/
+Disallow: /api/
+Disallow: /admin/
+
+# Для SPA запрещаем индексацию якорных ссылок как отдельных страниц
+Disallow: /*#*
+Disallow: /*#
+Disallow: /*?*
+Disallow: /*&
+
+# Sitemap
+Sitemap: https://ds-udacha.ru/sitemap.xml
+
+# Время задержки для ботов
+Crawl-delay: 1
+
+# Особые правила
+User-agent: Yandex
+Host: ds-udacha.ru
+Crawl-delay: 1
