@@ -2,7 +2,7 @@
   <section class="relative py-16 lg:py-20 overflow-hidden">
     <!-- Фоновое изображение -->
     <div class="absolute inset-0 z-0">
-      <NuxtImg
+      <img
         src="/images/1.svg"
         alt="Дети в детском саду"
         class="w-full h-full object-cover"

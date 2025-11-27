@@ -13,12 +13,12 @@ Disallow: /*?*
 Disallow: /*&
 
 # Sitemap
-Sitemap: https://ds-udacha.ru/sitemap.xml
+Sitemap: https://udacha-detsad.ru/sitemap.xml
 
 # Время задержки для ботов
 Crawl-delay: 1
 
 # Особые правила
 User-agent: Yandex
-Host: ds-udacha.ru
+Host: udacha-detsad.ru
 Crawl-delay: 1

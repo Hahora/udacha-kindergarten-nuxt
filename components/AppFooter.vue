@@ -250,31 +250,63 @@
 </template>
 
 <script setup>
+const route = useRoute();
+const router = useRouter();
+
 // Функция для плавного скролла к секциям
 const scrollToSection = (sectionId) => {
-  const element = document.getElementById(sectionId);
-  if (element) {
-    const headerHeight = 100;
-    const elementPosition = element.offsetTop - headerHeight;
+  // Если мы уже на главной странице
+  if (route.path === "/") {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerHeight = 100;
+      const elementPosition = element.offsetTop - headerHeight;
 
-    window.scrollTo({
-      top: elementPosition,
-      behavior: "smooth",
-    });
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth",
+      });
+    }
+  } else {
+    // Если на другой странице, переходим на главную с якорем
+    router.push(`/#${sectionId}`);
+  }
+};
+
+// Улучшенная функция для обработки навигации
+const handleNavigation = (sectionId) => {
+  if (route.path === "/") {
+    // Если уже на главной, скроллим к секции
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerHeight = 100;
+      const elementPosition = element.offsetTop - headerHeight;
+
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth",
+      });
+
+      // Обновляем URL с якорем
+      window.history.replaceState(null, null, `/#${sectionId}`);
+    }
+  } else {
+    // Если на другой странице, переходим на главную с якорем
+    router.push(`/#${sectionId}`);
   }
 };
 
 // Навигационные ссылки
 const navigationLinks = [
-  { href: "#about", text: "О нас", section: "about" },
-  { href: "#age-groups", text: "Группы", section: "age-groups" },
-  { href: "#lessons", text: "Занятия", section: "lessons" },
-  { href: "#programs", text: "Программы", section: "programs" },
-  { href: "#gallery", text: "Фотогаллерея", section: "gallery" },
-  { href: "#pricing", text: "Цены", section: "pricing" },
-  { href: "#faq", text: "Вопросы", section: "faq" },
-  { href: "#testimonials", text: "Отзывы", section: "testimonials" },
-  { href: "#contacts", text: "Контакты", section: "contacts" },
+  { href: "/#about", text: "О нас", section: "about" },
+  { href: "/#age-groups", text: "Группы", section: "age-groups" },
+  { href: "/#lessons", text: "Занятия", section: "lessons" },
+  { href: "/#programs", text: "Программы", section: "programs" },
+  { href: "/#gallery", text: "Фотогаллерея", section: "gallery" },
+  { href: "/#pricing", text: "Цены", section: "pricing" },
+  { href: "/#faq", text: "Вопросы", section: "faq" },
+  { href: "/#testimonials", text: "Отзывы", section: "testimonials" },
+  { href: "/#contacts", text: "Контакты", section: "contacts" },
 ];
 
 // Адреса филиалов
@@ -299,38 +331,3 @@ const locations = [
   },
 ];
 </script>
-
-<style scoped>
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out both;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Улучшенный ховер для карточек адресов */
-.bg-white\/5:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
-}
-
-/* Адаптивность для мобильных */
-@media (max-width: 768px) {
-  .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .grid {
-    gap: 2rem;
-  }
-}
-</style>

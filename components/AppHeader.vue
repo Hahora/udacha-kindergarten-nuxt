@@ -102,8 +102,8 @@
         <!-- Центральная навигация (только на больших экранах) -->
         <nav class="hidden xl:flex items-center space-x-6">
           <a
-            @click.prevent="scrollToSection('about')"
-            href="#about"
+            @click.prevent="handleNavigation('about')"
+            href="/#about"
             class="text-gray-700 hover:text-amber-500 transition-colors font-bold text-sm relative group cursor-pointer"
           >
             О нас
@@ -112,8 +112,8 @@
             ></span>
           </a>
           <a
-            @click.prevent="scrollToSection('age-groups')"
-            href="#age-groups"
+            @click.prevent="handleNavigation('age-groups')"
+            href="/#age-groups"
             class="text-gray-700 hover:text-amber-500 transition-colors font-bold text-sm relative group cursor-pointer"
           >
             Группы
@@ -122,8 +122,8 @@
             ></span>
           </a>
           <a
-            @click.prevent="scrollToSection('lessons')"
-            href="#lessons"
+            @click.prevent="handleNavigation('lessons')"
+            href="/#lessons"
             class="text-gray-700 hover:text-amber-500 transition-colors font-bold text-sm relative group cursor-pointer"
           >
             Занятия
@@ -132,8 +132,8 @@
             ></span>
           </a>
           <a
-            @click.prevent="scrollToSection('programs')"
-            href="#programs"
+            @click.prevent="handleNavigation('programs')"
+            href="/#programs"
             class="text-gray-700 hover:text-amber-500 transition-colors font-bold text-sm relative group cursor-pointer"
           >
             Программы
@@ -142,8 +142,8 @@
             ></span>
           </a>
           <a
-            @click.prevent="scrollToSection('gallery')"
-            href="#gallery"
+            @click.prevent="handleNavigation('gallery')"
+            href="/#gallery"
             class="text-gray-700 hover:text-amber-500 transition-colors font-bold text-sm relative group cursor-pointer"
           >
             Фотогаллерея
@@ -152,8 +152,8 @@
             ></span>
           </a>
           <a
-            @click.prevent="scrollToSection('pricing')"
-            href="#pricing"
+            @click.prevent="handleNavigation('pricing')"
+            href="/#pricing"
             class="text-gray-700 hover:text-amber-500 transition-colors font-bold text-sm relative group cursor-pointer"
           >
             Цены
@@ -162,8 +162,8 @@
             ></span>
           </a>
           <a
-            @click.prevent="scrollToSection('faq')"
-            href="#faq"
+            @click.prevent="handleNavigation('faq')"
+            href="/#faq"
             class="text-gray-700 hover:text-amber-500 transition-colors font-bold text-sm relative group cursor-pointer"
           >
             Вопросы
@@ -172,8 +172,8 @@
             ></span>
           </a>
           <a
-            @click.prevent="scrollToSection('testimonials')"
-            href="#testimonials"
+            @click.prevent="handleNavigation('testimonials')"
+            href="/#testimonials"
             class="text-gray-700 hover:text-amber-500 transition-colors font-bold text-sm relative group cursor-pointer"
           >
             Отзывы
@@ -182,8 +182,8 @@
             ></span>
           </a>
           <a
-            @click.prevent="scrollToSection('contacts')"
-            href="#contacts"
+            @click.prevent="handleNavigation('contacts')"
+            href="/#contacts"
             class="text-gray-700 hover:text-amber-500 transition-colors font-bold text-sm relative group cursor-pointer"
           >
             Контакты
@@ -311,7 +311,7 @@
                 v-for="(link, index) in navigationLinks"
                 :key="link.href"
                 @click.prevent="
-                  scrollToSection(link.section);
+                  handleNavigation(link.section);
                   closeMobileMenu();
                 "
                 :href="link.href"
@@ -460,6 +460,8 @@
 <script setup>
 // Получаем предоставленную функцию открытия модального окна
 const openCallbackModal = inject("openCallbackModal");
+const route = useRoute();
+const router = useRouter();
 
 // Реактивные данные
 const isScrolled = ref(false);
@@ -481,17 +483,26 @@ onMounted(() => {
   });
 });
 
-// Функция плавного скролла к секции
-const scrollToSection = (sectionId) => {
-  const element = document.getElementById(sectionId);
-  if (element) {
-    const headerHeight = 100; // Высота хедера
-    const elementPosition = element.offsetTop - headerHeight;
+// Улучшенная функция для обработки навигации
+const handleNavigation = (sectionId) => {
+  if (route.path === "/") {
+    // Если уже на главной, скроллим к секции
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerHeight = 100;
+      const elementPosition = element.offsetTop - headerHeight;
 
-    window.scrollTo({
-      top: elementPosition,
-      behavior: "smooth",
-    });
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth",
+      });
+
+      // Обновляем URL с якорем
+      window.history.replaceState(null, null, `/#${sectionId}`);
+    }
+  } else {
+    // Если на другой странице, переходим на главную с якорем
+    router.push(`/#${sectionId}`);
   }
 };
 
@@ -515,15 +526,15 @@ const handleCallbackClick = () => {
 
 // Навигационные ссылки - синхронизированы с десктопной версией
 const navigationLinks = [
-  { href: "#about", text: "О нас", section: "about" },
-  { href: "#age-groups", text: "Группы", section: "age-groups" },
-  { href: "#lessons", text: "Занятия", section: "lessons" },
-  { href: "#programs", text: "Программы", section: "programs" },
-  { href: "#gallery", text: "Фотогаллерея", section: "gallery" },
-  { href: "#pricing", text: "Цены", section: "pricing" },
-  { href: "#faq", text: "Вопросы", section: "faq" },
-  { href: "#testimonials", text: "Отзывы", section: "testimonials" },
-  { href: "#contacts", text: "Контакты", section: "contacts" },
+  { href: "/#about", text: "О нас", section: "about" },
+  { href: "/#age-groups", text: "Группы", section: "age-groups" },
+  { href: "/#lessons", text: "Занятия", section: "lessons" },
+  { href: "/#programs", text: "Программы", section: "programs" },
+  { href: "/#gallery", text: "Фотогаллерея", section: "gallery" },
+  { href: "/#pricing", text: "Цены", section: "pricing" },
+  { href: "/#faq", text: "Вопросы", section: "faq" },
+  { href: "/#testimonials", text: "Отзывы", section: "testimonials" },
+  { href: "/#contacts", text: "Контакты", section: "contacts" },
 ];
 
 // Адреса филиалов

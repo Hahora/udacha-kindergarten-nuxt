@@ -87,8 +87,7 @@
               <div
                 class="w-20 h-20 bg-gradient-to-br from-pink-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
               >
-                <!-- Заменено на kid1.svg -->
-                <NuxtImg
+                <img
                   src="/images/kid1.svg"
                   alt="Малыш"
                   class="w-20 h-20 text-white"
@@ -229,7 +228,7 @@
                 class="w-20 h-20 bg-gradient-to-br from-green-400 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
               >
                 <!-- Заменено на kid2.svg -->
-                <NuxtImg
+                <img
                   src="/images/kid2.svg"
                   alt="Ребенок средней группы"
                   class="w-20 h-20 text-white"
@@ -370,7 +369,7 @@
                 class="w-20 h-20 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
               >
                 <!-- Заменено на kid3.svg -->
-                <NuxtImg
+                <img
                   src="/images/kid3.svg"
                   alt="Ребенок старшей группы"
                   class="w-20 h-20 text-white"
