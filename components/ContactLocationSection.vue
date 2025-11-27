@@ -174,10 +174,10 @@
                 <h3 class="font-black text-lg">Телефон</h3>
               </div>
               <a
-                href="tel:+79897026332"
+                href="tel:+79085019627"
                 class="text-amber-300 hover:text-amber-200 transition-colors font-bold text-lg"
               >
-                +7 (989) 702-63-32
+                +7 (908) 501-96-27
               </a>
             </div>
 

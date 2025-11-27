@@ -8,10 +8,10 @@
         <!-- Контакты слева -->
         <div class="flex items-center space-x-6">
           <a
-            href="tel:+79897026332"
+            href="tel:+79085019627"
             class="text-sm font-bold text-gray-700 hover:text-amber-600 transition-colors"
           >
-            +7 (989) 702-63-32
+            +7 (908) 501-96-27
           </a>
           <NuxtLink
             to="/license"
@@ -364,10 +364,10 @@
                 }"
               >
                 <a
-                  href="tel:+79897026332"
+                  href="tel:+79085019627"
                   class="text-base font-black text-gray-900 hover:text-amber-600 transition-colors block"
                 >
-                  +7 (989) 702-63-32
+                  +7 (908) 501-96-27
                 </a>
                 <NuxtLink
                   to="/license"

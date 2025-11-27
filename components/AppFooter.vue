@@ -133,10 +133,10 @@
               </div>
               <div>
                 <a
-                  href="tel:+79897026332"
+                  href="tel:+79085019627"
                   class="text-white font-black hover:text-amber-400 transition-colors text-lg"
                 >
-                  +7 (989) 702-63-32
+                  +7 (908) 501-96-27
                 </a>
                 <p class="text-gray-400 text-sm font-bold mt-1">
                   ПН-ПТ 9:00-21:00

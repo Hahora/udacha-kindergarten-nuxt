@@ -74,7 +74,7 @@ useSeoMeta({
   title:
     'Детский сад "Удача" в Ростове-на-Дону - Лицензированное дошкольное образование',
   description:
-    'Частный детский сад "Удача" в Ростове-на-Дону ⭐ Лицензированное образование для детей 1,3-7 лет ⭐ 3 филиала ⭐ Принимаем материнский капитал ⭐ Работаем 7:00-20:00 ⭐ ☎️ +7 (989) 702-63-32',
+    'Частный детский сад "Удача" в Ростове-на-Дону ⭐ Лицензированное образование для детей 1,3-7 лет ⭐ 3 филиала ⭐ Принимаем материнский капитал ⭐ Работаем 7:00-20:00 ⭐ ☎️ +7 (908) 501-96-27',
   keywords:
     "детский сад Ростов-на-Дону, частный детский сад, дошкольное образование, материнский капитал, подготовка к школе, развивающие занятия, лицензия образование, детский сад Удача, ясли, группы кратковременного пребывания",
 
@@ -99,7 +99,7 @@ useSeoMeta({
   ICBM: "47.219061, 39.713261",
 
   // Контактная информация
-  "contact:phone_number": "+7-989-702-63-32",
+  "contact:phone_number": "+7 (908) 501-96-27",
   "contact:email": "xenova.v2@yandex.ru",
   "contact:address": "ул. Темерницкая, 65, Ростов-на-Дону, 344002",
 
@@ -135,7 +135,7 @@ useSeoMeta({
   ogLocale: "ru_RU",
 
   // Дополнительные Open Graph теги для бизнеса
-  "og:phone_number": "+7-989-702-63-32",
+  "og:phone_number": "+7 (908) 501-96-27",
   "og:email": "xenova.v2@yandex.ru",
   "og:latitude": "47.219061",
   "og:longitude": "39.713261",
@@ -177,7 +177,7 @@ useSeoMeta({
   "business:contact_data:postal_code": "344002",
   "business:contact_data:country_name": "Россия",
   "business:contact_data:email": "xenova.v2@yandex.ru",
-  "business:contact_data:phone_number": "+7-989-702-63-32",
+  "business:contact_data:phone_number": "+7 (908) 501-96-27",
   "business:contact_data:website": "https://udacha-detsad.ru",
 });
 
@@ -254,9 +254,9 @@ useHead({
           "https://udacha-detsad.ru/images/photo-temern/0002YKA.jpg.webp",
           "https://udacha-detsad.ru/images/photo-temern/0003YKA.jpg.webp",
         ],
-        telephone: ["+7-989-702-63-32", "+79897026332"],
+        telephone: ["+7-908-501-96-27", "+79085019627"],
         email: ["info@udacha-detsad.ru", "central@udacha-detsad.ru"],
-        faxNumber: "+7-989-702-63-32",
+        faxNumber: "+7-908-501-96-27",
         keywords:
           "детский сад Ростов-на-Дону, частный детский сад, дошкольное образование, материнский капитал, подготовка к школе, развивающие занятия, ясли, группы кратковременного пребывания",
         address: [
@@ -428,7 +428,7 @@ useHead({
         contactPoint: [
           {
             "@type": "ContactPoint",
-            telephone: "+7-989-702-63-32",
+            telephone: "+7-908-501-96-27",
             contactType: "customer service",
             availableLanguage: ["Russian"],
             hoursAvailable: {
@@ -491,7 +491,7 @@ useHead({
         description:
           "Частный лицензированный детский сад в Ростове-на-Дону для детей от 1,3 до 7 лет",
         url: "https://udacha-detsad.ru",
-        telephone: "+7-989-702-63-32",
+        telephone: "+7-908-501-96-27",
         address: {
           "@type": "PostalAddress",
           streetAddress: "ул. Темерницкая, 65",
@@ -527,7 +527,7 @@ useHead({
         logo: "https://udacha-detsad.ru/logo.png",
         contactPoint: {
           "@type": "ContactPoint",
-          telephone: "+7-989-702-63-32",
+          telephone: "+7-908-501-96-27",
           contactType: "customer service",
           areaServed: "RU",
           availableLanguage: ["Russian"],

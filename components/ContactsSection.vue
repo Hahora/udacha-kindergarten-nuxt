@@ -68,10 +68,10 @@
               Звоните прямо сейчас
             </p>
             <a
-              href="tel:+79897026332"
+              href="tel:+79085019627"
               class="text-white font-bold text-lg hover:text-amber-400 transition-colors duration-200 block"
             >
-              +7 989 702 63 32
+              +7 (908) 501-96-27
             </a>
             <p class="text-blue-100 text-xs mt-1">Ежедневно с 9:00 до 21:00</p>
           </div>
