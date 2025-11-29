@@ -60,7 +60,7 @@ export default defineNuxtConfig({
   // Runtime переменные
   runtimeConfig: {
     public: {
-      yandexMapsApiKey: process.env.YANDEX_MAPS_API_KEY || "",
+      yandexMapsApiKey: process.env.NUXT_PUBLIC_YANDEX_MAPS_API_KEY || "",
       yandexMetricaId: process.env.NUXT_PUBLIC_YANDEX_METRICA_ID || "",
       googleAnalyticsId: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID || "",
       apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL || "",
