@@ -245,6 +245,21 @@
           </div>
         </div>
       </div>
+      <div class="border-t border-white/10 mt-6 pt-6 text-center">
+        <p class="text-gray-400 text-xs font-bold">
+          Разработка сайта и продвижение бизнеса
+        </p>
+        <p class="text-gray-400 text-xs font-bold mt-1">
+          <a
+            href="https://traffic-rock.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-amber-400 hover:text-amber-300 transition-colors"
+          >
+            Traffic-Rock
+          </a>
+        </p>
+      </div>
     </div>
   </footer>
 </template>

@@ -160,16 +160,6 @@ useSeoMeta({
   rating: "general",
   referrer: "origin-when-cross-origin",
 
-  // Теги для Яндекса
-  "yandex-verification":
-    useRuntimeConfig().public.yandexVerification ||
-    "your-yandex-verification-code",
-
-  // Теги для Google
-  "google-site-verification":
-    useRuntimeConfig().public.googleVerification ||
-    "your-google-verification-code",
-
   // Дополнительная информация о бизнесе
   "business:contact_data:street_address": "ул. Темерницкая, 65",
   "business:contact_data:locality": "Ростов-на-Дону",

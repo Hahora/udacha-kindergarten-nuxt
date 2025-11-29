@@ -63,8 +63,6 @@ export default defineNuxtConfig({
       yandexMapsApiKey: process.env.YANDEX_MAPS_API_KEY || "",
       yandexMetricaId: process.env.NUXT_PUBLIC_YANDEX_METRICA_ID || "",
       googleAnalyticsId: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID || "",
-      yandexVerification: process.env.NUXT_PUBLIC_YANDEX_VERIFICATION || "",
-      googleVerification: process.env.NUXT_PUBLIC_GOOGLE_VERIFICATION || "",
       apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL || "",
       apiCallbackEndpoint:
         process.env.NUXT_PUBLIC_API_CALLBACK_ENDPOINT || "/callback",
